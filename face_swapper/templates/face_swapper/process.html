@@ -1,0 +1,24 @@
+{% extends "face_swapper/base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+Hello World {{ foo }}
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static "face_swapper/scripts/faceswapper.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<ul>
+  <li>Pitch: {{results.pitch}}</li>
+  <li>Yaw: {{results.yaw}}</li>
+  <li>Rotation: {{results.rotation}}</li>
+  <li>X position: {{results.x}}</li>
+  <li>Y position: {{results.y}}</li>
+  <li>Width: {{results.width}}</li>
+  <li>Height: {{results.height}}</li>
+</li>
+
+{% endblock %}

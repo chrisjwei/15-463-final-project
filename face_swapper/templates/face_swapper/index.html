@@ -1,0 +1,19 @@
+{% extends "face_swapper/base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+Hello World {{ foo }}
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static "face_swapper/scripts/faceswapper.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<form action="/faceswapper/process/" method="get">
+  <input type="text" name="url">
+  <input type="submit" value="Process">
+</form>
+
+{% endblock %}
